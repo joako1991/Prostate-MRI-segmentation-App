@@ -5,7 +5,7 @@ Le Creusot - 71200 France
 Year: 2020
 '''
 
-import image_segmentation.acs_improved  as acs_improved
+import image_segmentation.acs_simplified  as acs_simplified
 import image_segmentation.acs_basic  as acs_basic
 import image_segmentation.acs_gvf  as acs_gvf
 
@@ -13,12 +13,12 @@ from collections import OrderedDict
 
 # Segmentation methods
 ACTIVE_CONTOURS_LEVEL_SET_BASIC = 1
-ACTIVE_CONTOURS_LEVEL_SET_IMPROVED = 2
+ACTIVE_CONTOURS_LEVEL_SET_SIMPLIFIED = 2
 ACTIVE_CONTOURS_LEVEL_SET_GVF = 3
 
 methods_dict = OrderedDict()
 methods_dict['Basic ACS'] = ACTIVE_CONTOURS_LEVEL_SET_BASIC
-methods_dict['Improved ACS'] = ACTIVE_CONTOURS_LEVEL_SET_IMPROVED
+methods_dict['Simplified ACS'] = ACTIVE_CONTOURS_LEVEL_SET_SIMPLIFIED
 methods_dict['GVF ACS'] = ACTIVE_CONTOURS_LEVEL_SET_GVF
 
 class SegmentationHub(object):
@@ -45,9 +45,9 @@ class SegmentationHub(object):
 
     def get_segmentation_object(self, method):
         segm_obj = None
-        if method == ACTIVE_CONTOURS_LEVEL_SET_IMPROVED:
-            print("SegmentationHub: Using ACS Improved implementation")
-            segm_obj = acs_improved.ActiveContourSegmentation(
+        if method == ACTIVE_CONTOURS_LEVEL_SET_SIMPLIFIED:
+            print("SegmentationHub: Using ACS Simplified implementation")
+            segm_obj = acs_simplified.ActiveContourSegmentation(
                 max_its = 200,
                 lengthEweight = self.lenEweight,
                 shapeEweight = self.shaEweight)
