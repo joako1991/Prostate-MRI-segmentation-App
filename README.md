@@ -8,6 +8,25 @@ This program not only works only, but it also provides a code base for the user 
 # Main program window
 ![GitHub Logo](/GUI.png)
 
+
+# Citation
+If you find this code useful for your research, please cite the paper:
+```
+@Article{app10186163,
+    AUTHOR = {Rodríguez, Joaquín and Ochoa-Ruiz, Gilberto and Mata, Christian},
+    TITLE = {A Prostate MRI Segmentation Tool Based on Active Contour Models Using a Gradient Vector Flow},
+    JOURNAL = {Applied Sciences},
+    VOLUME = {10},
+    YEAR = {2020},
+    NUMBER = {18},
+    ARTICLE-NUMBER = {6163},
+    URL = {https://www.mdpi.com/2076-3417/10/18/6163},
+    ISSN = {2076-3417},
+    DOI = {10.3390/app10186163}
+}
+```
+
+
 # Getting stated
 In order to run this program, some dependencies are required. The commands are Linux-based commands, but the libraries are available for windows and Mac too, since they are for Python and Qt.
 
